@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/channel_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        card:cardBackgroundColor="@android:color/white"
+        card:cardElevation="3dp"
+        card:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/channel_image"
+                android:layout_width="125dp"
+                android:layout_height="match_parent" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/dividers" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp">
+
+                    <!-- Channel Title -->
+                    <TextView
+                        android:id="@+id/channel_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="TITLE"
+                        android:textColor="@color/text"
+                        android:textSize="20sp" />
+
+                    <!-- Channel Category -->
+                    <TextView
+                        android:id="@+id/channel_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="CATEGORY"
+                        android:textColor="@color/secondary" />
+
+                </RelativeLayout>
+
+                <!-- Divider -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp">
+
+                    <!-- Channel Description -->
+                    <TextView
+                        android:id="@+id/channel_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="12.5dp"
+                        android:layout_marginStart="12.5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="DESCRIPTION"
+                        android:textColor="@color/secondary" />
+
+
+                </RelativeLayout>
+
+                <!-- Divider -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <!-- Channel Distance -->
+                    <TextView
+                        android:id="@+id/channel_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="4dp"
+                        android:text="0"
+                        android:textColor="@color/colorPrimary" />
+
+                    <!-- Channel Size -->
+                    <TextView
+                        android:id="@+id/channel_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="4dp"
+                        android:text="0/0"
+                        android:textColor="@color/secondary" />
+
+                </RelativeLayout>
+
+                <ViewStub
+                    android:id="@+id/channel_item_stub"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
